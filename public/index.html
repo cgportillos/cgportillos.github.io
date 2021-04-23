@@ -4,6 +4,8 @@
 	<head>
 		<title>FIFAViz</title>
         <link rel="stylesheet" href="styles.css">
+        <script src="https://d3js.org/d3.v6.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.min.js"></script>
     </head>
 
     <body>
@@ -42,49 +44,43 @@
                 has been a decline in his skillset and we can see that with his misplayed passes, missed goal opportunities, etc. However, his body
                 is still strong and he remains sharp.
             </div>
-            <div class="pt-10 ml-96 mr-96">
-                <img class="object-center w-max h-max"
-                     src="barchart.png">
-            </div>
+        </div>
 
-            <div class="pt-10 ml-96 mr-96">
-                <img class="object-center w-max h-max"
-                     src="boxplot.png">
-            </div>
+        <div class="content-center">
+            <script src="bubblechart.js"></script>
+            <script src="boxplot.js"></script>
+            <script src="dotplot.js"></script>
+            <script src="barchart.js"></script>
+        </div>
 
-            <div class="pt-10 ml-96 mr-96">
-                <img class="object-center w-max h-max"
-                     src="dotplot.png">
-            </div>
+        <div class="content-center justify-center pt-20 text-center mx-auto text-lg pt-10 text-green-600">
+            FEATURES/CHALLENGES
+        </div>
 
-            <div class="text-lg pt-10 text-green-600">
-                FEATURES/CHALLENGES
-            </div>
+        <div class="content-center justify-center pt-20 text-center mx-auto pt-2 text-left text-black ml-96 mr-96">
+            So far, I think I've got a good amount setup for my project. I've got a rough
+            sketch of the graphs in Tableau that I'm going to want to mirror in D3 which is
+            a good help. I had some sketches in my proposal but actually having the visualization
+            on my page gives me an idea of what I need to work on. I'm not entirely sure how I'd
+            want to position my graphs and would love some feedback on how best to display my graphs.
+            I'm going to have one more graph, but the one I had thought about initially didn't really
+            show me anything insightful when I created it in Tableau with the data, so I'm going to have
+            to figure out something else for that. Other than this, I soon will be working on the
+            visualizations in D3 and add interaction as well.
+        </div>
 
-            <div class="pt-2 text-left text-black ml-96 mr-96">
-                So far, I think I've got a good amount setup for my project. I've got a rough
-                sketch of the graphs in Tableau that I'm going to want to mirror in D3 which is
-                a good help. I had some sketches in my proposal but actually having the visualization
-                on my page gives me an idea of what I need to work on. I'm not entirely sure how I'd
-                want to position my graphs and would love some feedback on how best to display my graphs.
-                I'm going to have one more graph, but the one I had thought about initially didn't really
-                show me anything insightful when I created it in Tableau with the data, so I'm going to have
-                to figure out something else for that. Other than this, I soon will be working on the
-                visualizations in D3 and add interaction as well.
-            </div>
+        <div class="content-center justify-center pt-20 text-center mx-auto text-lg pt-10 text-green-600">
+            TASKS/MILESTONES
+        </div>
 
-            <div class="text-lg pt-10 text-green-600">
-                TASKS/MILESTONES
-            </div>
-
-            <div class="pt-2 text-left pb-20 text-black ml-96 mr-96">
-                <ul class="list-disc">
-                    <li>Create histogram in D3 (OBJ#1) (4/15) --> To see where the best players come from</li>
-                    <li>Figure out which chart for OBJ#3 in D3 and create it (4/15) --> compare a player's age to their rating</li>
-                    <li>Create dot plot (OBJ#4) (4/16) --> To see the average age per position</li>
-                    <li>Create box plot (OBJ#2) (4/16) --> To see average age of players on teams</li>
-                </ul>
-            </div>
+        <div class="content-center justify-center pt-20 text-center mx-auto pt-2 text-left pb-20 text-black ml-96 mr-96">
+            <ul class="list-disc">
+                <li>Create histogram in D3 (OBJ#1) (4/15) --> To see where the best players come from</li>
+                <li>Figure out which chart for OBJ#3 in D3 and create it (4/15) --> compare a player's age to their rating</li>
+                <li>Create dot plot (OBJ#4) (4/16) --> To see the average age per position</li>
+                <li>Create box plot (OBJ#2) (4/16) --> To see average age of players on teams</li>
+            </ul>
+        </div>
     </body>
 
 </html>
