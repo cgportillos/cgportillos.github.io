@@ -555,6 +555,11 @@ video {
   width: 100%;
 }
 
+.svg-container{
+     display: inline-block;
+     margin: 0 auto;
+}
+
 @media (min-width: 640px) {
   .container {
     max-width: 640px;

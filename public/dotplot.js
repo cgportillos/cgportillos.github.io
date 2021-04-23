@@ -87,7 +87,9 @@ function main() {
             .shapeWidth(18)
             .shapeHeight(20)
             .labelFormat(d3.format(","))
-            .labelAlign("middle");
+            .labelAlign("middle")
+            .shape("path", d3.symbol().type(d3.symbolCircle).size(150)())
+
         svg
             .append("g")
             .attr("transform", "translate(1100, 200)")
