@@ -1,7 +1,7 @@
 function main() {
 
     let svg = d3.select("body").append("svg")
-        .attr("width", 1250)
+        .attr("width", 1980)
         .attr("height", 700);
 
     let countries = [
@@ -27,7 +27,7 @@ function main() {
         "France"
     ]
 
-    let xScale = d3.scaleLinear().domain([0, 7]).range([225, 1050]);
+    let xScale = d3.scaleLinear().domain([0, 7]).range([460, 1335]);
     let xAxis = d3.axisBottom(xScale).ticks(7).tickFormat(d => d);
 
     let yScale = d3.scaleBand().domain(countries).range([600, 100]);
@@ -42,16 +42,16 @@ function main() {
     svg.selectAll("text")
 
     svg.append("text")
-        .attr("x", 580)
+        .attr("x", 850)
         .attr("y", 650)
         .text("Count of Players with Rating > 86")
 
     svg.append("text")
-        .attr("transform", "translate(200, 365) rotate(-90)")
+        .attr("transform", "translate(420, 365) rotate(-90)")
         .text("Country")
 
     svg.append("text")
-        .attr("transform", "translate(500, 75)")
+        .attr("transform", "translate(735, 75)")
         .text("Top Locations for Highest Rated Players in FIFA 21")
         .style("font-size","20px")
 
@@ -61,7 +61,7 @@ function main() {
         .call(xAxis);
 
     svg.append("g")
-        .attr("transform",`translate(${285},${0})`)
+        .attr("transform",`translate(${520},${0})`)
         .style("font-size","12px")
         .call(yAxis)
 
@@ -70,11 +70,11 @@ function main() {
             .data(data)
             .enter()
             .append("rect")
-            .attr("x", 286)
+            .attr("x", 521)
             .attr("y", function(d, i) {
                 return 580 + (i*(-25));
             })
-            .attr("width", function(d) { return d.overall * 117.5; })
+            .attr("width", function(d) { return d.overall * 124.5; })
             .attr("height", 15)
             .attr("fill", function(d) {
                 return colorScale(d.overall);
@@ -95,7 +95,7 @@ function main() {
             .labelAlign("middle");
         svg
             .append("g")
-            .attr("transform", "translate(1100, 200)")
+            .attr("transform", "translate(1425, 200)")
             .call(legend);
     });
 }

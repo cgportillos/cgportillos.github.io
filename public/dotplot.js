@@ -1,7 +1,7 @@
 function main() {
 
     let svg = d3.select("body").append("svg")
-        .attr("width", 1250)
+        .attr("width", 1980)
         .attr("height", 700);
 
     let positions = [
@@ -24,7 +24,7 @@ function main() {
         "ST"
     ]
 
-    let xScale = d3.scaleLinear().domain([22, 28]).range([225, 1050]);
+    let xScale = d3.scaleLinear().domain([22, 28]).range([460, 1335]);
     let xAxis = d3.axisBottom(xScale).ticks(7).tickFormat(d => d);
 
     let yScale = d3.scaleBand().domain(positions).range([600, 100]);
@@ -39,16 +39,16 @@ function main() {
     svg.selectAll("text")
 
     svg.append("text")
-        .attr("x", 650)
+        .attr("x", 915)
         .attr("y", 650)
         .text("Average Age")
 
     svg.append("text")
-        .attr("transform", "translate(225, 365) rotate(-90)")
+        .attr("transform", "translate(420, 365) rotate(-90)")
         .text("Position")
 
     svg.append("text")
-        .attr("transform", "translate(550, 75)")
+        .attr("transform", "translate(810, 75)")
         .text("Average Age per Position in FIFA 21")
         .style("font-size","20px")
 
@@ -58,7 +58,7 @@ function main() {
         .call(xAxis);
 
     svg.append("g")
-        .attr("transform",`translate(${285},${0})`)
+        .attr("transform",`translate(${520},${0})`)
         .style("font-size","12px")
         .call(yAxis)
 
@@ -68,7 +68,7 @@ function main() {
             .enter()
             .append("circle")
             .attr("cx", function(d, i) {
-                return -2672 + d.age*135;
+                return -2667 + d.age*145;
             })
             .attr("cy", function(d, i) {
                 return 117 + (i*33.25);
@@ -92,7 +92,7 @@ function main() {
 
         svg
             .append("g")
-            .attr("transform", "translate(1100, 200)")
+            .attr("transform", "translate(1425, 200)")
             .call(legend);
     });
 }

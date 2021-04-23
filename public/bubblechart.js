@@ -1,7 +1,7 @@
 function main() {
 
     let svg = d3.select("body").append("svg")
-        .attr("width", 1250)
+        .attr("width", 1980)
         .attr("height", 700);
 
     let countries = [
@@ -17,7 +17,7 @@ function main() {
         "England"
     ]
 
-    let xScale = d3.scaleLinear().domain([1000, 6000]).range([225, 1050]);
+    let xScale = d3.scaleLinear().domain([1000, 6000]).range([460, 1335]);
     let xAxis = d3.axisBottom(xScale).ticks(14).tickFormat(d => d);
 
     let yScale = d3.scaleBand().domain(countries).range([600, 100]);
@@ -32,16 +32,16 @@ function main() {
     svg.selectAll("text")
 
     svg.append("text")
-        .attr("x", 650)
+        .attr("x", 900)
         .attr("y", 650)
         .text("Total Purchases")
 
     svg.append("text")
-        .attr("transform", "translate(200, 365) rotate(-90)")
+        .attr("transform", "translate(420, 365) rotate(-90)")
         .text("Country")
 
     svg.append("text")
-        .attr("transform", "translate(550, 75)")
+        .attr("transform", "translate(810, 75)")
         .text("Popular Players bought Per Country")
         .style("font-size","20px")
 
@@ -51,7 +51,7 @@ function main() {
         .call(xAxis);
 
     svg.append("g")
-        .attr("transform",`translate(${285},${0})`)
+        .attr("transform",`translate(${520},${0})`)
         .style("font-size","12px")
         .call(yAxis)
 
@@ -61,7 +61,7 @@ function main() {
             .enter()
             .append("circle")
             .attr("cx", function(d, i) {
-                return 120 + d.hits/6;
+                return 352 + d.hits/6;
             })
             .attr("cy", function(d, i) {
                 return 117 + (i*51);
@@ -100,7 +100,7 @@ function main() {
 
         svg
             .append("g")
-            .attr("transform", "translate(1100, 200)")
+            .attr("transform", "translate(1425, 200)")
             .call(legend);
     });
 }
