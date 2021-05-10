@@ -66,7 +66,7 @@ function main() {
             .attr("y", function(d, i) {
                 return 112 + (i*(50));
             })
-            .attr("width", function(d) { return -175 + d.hits/5.6; })
+            .attr("width", function(d) { return -180 + d.hits/5.68; })
             .attr("height", 25)
             .attr("fill", function(d) {
                 return colorScale(d.hits);
