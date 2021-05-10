@@ -50,7 +50,7 @@ function main() {
             .attr("y", 260)
             .attr("width", (q1+q3) + 9)
             .attr("height", 100)
-            .attr("fill", 'forestgreen')
+            .attr("fill", '#002776')
             .attr("stroke", "black")
 
         svg.append("line")

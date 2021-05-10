@@ -31,7 +31,7 @@ function main() {
     let yAxis = d3.axisLeft(yScale).ticks(20);
 
     let colorScale = d3.scaleSequential().domain([21,28])
-        .interpolator(d3.interpolateGreens);
+        .interpolator(d3.interpolateBlues);
 
     var sequentialScale = d3.scaleSequential(d3.interpolateRainbow)
         .domain([0,7]);

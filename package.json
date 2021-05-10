@@ -1,23 +1,15 @@
 {
-  "name": "cgportillos.github.io",
+  "name": "start-template-talwindCSS",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build-css": "tailwindcss build src/styles.css -o public/styles.css"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cgportillos/cgportillos.github.io.git"
+    "build:css": "tailwind build src/tailwind.css -o assets/css/tailwind.css"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/cgportillos/cgportillos.github.io/issues"
-  },
-  "homepage": "https://github.com/cgportillos/cgportillos.github.io#readme",
   "dependencies": {
-    "tailwindcss": "^2.1.1"
+    "tailwindcss": "^1.7.6"
   }
 }

@@ -17,6 +17,8 @@ function main() {
         "England"
     ]
 
+    var tooltip = d3.select("body").append("div").attr("class", "toolTip");
+
     let xScale = d3.scaleLinear().domain([1000, 6000]).range([460, 1335]);
     let xAxis = d3.axisBottom(xScale).ticks(14).tickFormat(d => d);
 
@@ -56,34 +58,28 @@ function main() {
         .call(yAxis)
 
     d3.csv("fifa21_bubble.csv").then(function (data) {
-        svg.selectAll("circle")
+        svg.selectAll(".bar")
             .data(data)
             .enter()
-            .append("circle")
-            .attr("cx", function(d, i) {
-                return 352 + d.hits/6;
+            .append("rect")
+            .attr("x", 521)
+            .attr("y", function(d, i) {
+                return 112 + (i*(50));
             })
-            .attr("cy", function(d, i) {
-                return 117 + (i*51);
+            .attr("width", function(d) { return -130 + d.hits/6.44; })
+            .attr("height", 25)
+            .attr("fill", function(d) {
+                return colorScale(d.hits);
             })
-            .attr("r", function(d, i) {
-                var ret = 0;
-                if (d.avg_potential == 72) {
-                    ret = d.avg_potential/12;
-                } else if (d.avg_potential == 73) {
-                    ret = d.avg_potential/10;
-                } else if (d.avg_potential == 74) {
-                    ret = d.avg_potential/8;
-                } else if (d.avg_potential == 75) {
-                    ret = d.avg_potential/6;
-                } else if (d.avg_potential == 76) {
-                    ret = d.avg_potential/4;
-                }
-                return ret;
-            })
-
-            .attr("fill", function(d) { return colorScale(d.hits); })
             .attr("stroke", "black")
+            .on("mousemove", function(event, d){
+                tooltip
+                    .style("left", event.pageX + "px")
+                    .style("top", event.pageY + "px")
+                    .style("display", "inline-block")
+                    .html("<br>" + "Amount: " + 0);
+            })
+            .on("mouseout", function(d){ tooltip.style("display", "none");});
 
         // whole chart goes away when i have this
         let legend = d3
@@ -93,14 +89,13 @@ function main() {
             .scale(colorScale)
             .cells([1000, 2000, 3000, 4000, 5000, 6000])
             .shapeWidth(18)
+            .orient('vertical')
             .shapeHeight(20)
             .labelFormat(d3.format(","))
-            .labelAlign("middle")
-            .shape("path", d3.symbol().type(d3.symbolCircle).size(150)())
-
+            .labelAlign("middle");
         svg
             .append("g")
-            .attr("transform", "translate(1425, 200)")
+            .attr("transform", "translate(1475, 200)")
             .call(legend);
     });
 }
