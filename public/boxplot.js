@@ -2,7 +2,7 @@ function main() {
 
     let svg = d3.select("body").append("svg")
         .attr("width", 1980)
-        .attr("height", 600);
+        .attr("height", 500);
 
     // shortcut to creating tickmark found at: https://ghenshaw-work.medium.com/customizing-axes-in-d3-js-99d58863738b
     let x = d3.scaleLinear().domain([16, 44]).range([460, 1335]);
@@ -17,7 +17,7 @@ function main() {
         .text("Age");
 
     svg.append("text")
-        .attr("transform", "translate(815, 125)")
+        .attr("transform", "translate(815, 170)")
         .text("Average Age of Players in FIFA 21")
         .style("font-size","20px")
 
