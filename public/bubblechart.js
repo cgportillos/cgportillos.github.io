@@ -17,7 +17,7 @@ function main() {
         "England"
     ]
 
-    var tooltip = d3.select("body").append("div").attr("class", "toolTip");
+    let tooltip = d3.select("body").append("div").attr("class", "toolTipBar2");
 
     let xScale = d3.scaleLinear().domain([1000, 6000]).range([460, 1335]);
     let xAxis = d3.axisBottom(xScale).ticks(14).tickFormat(d => d);
@@ -66,20 +66,25 @@ function main() {
             .attr("y", function(d, i) {
                 return 112 + (i*(50));
             })
-            .attr("width", function(d) { return -130 + d.hits/6.44; })
+            .attr("width", function(d) { return -175 + d.hits/5.6; })
             .attr("height", 25)
             .attr("fill", function(d) {
                 return colorScale(d.hits);
             })
             .attr("stroke", "black")
-            .on("mousemove", function(event, d){
+            .on("mouseover", function(event, d){
                 tooltip
                     .style("left", event.pageX + "px")
                     .style("top", event.pageY + "px")
                     .style("display", "inline-block")
-                    .html("<br>" + "Amount: " + 0);
+                    .html("<br>" + "Total Country Purchases: " + d.hits
+                        + "<br>" + "Top Player: " + d.name
+                        + "<br>" + "Purchases: " + d.tophits
+                        + "<br>" + "Rating: " + d.overall
+                        + "<br>" + "Position: " + d.position
+                        + "<br>" + "Team: " + d.team);
             })
-            .on("mouseout", function(d){ tooltip.style("display", "none");});
+            .on("mouseout", function() { tooltip.style("display", "none"); });
 
         // whole chart goes away when i have this
         let legend = d3

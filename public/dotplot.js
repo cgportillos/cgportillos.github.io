@@ -30,6 +30,8 @@ function main() {
     let yScale = d3.scaleBand().domain(positions).range([600, 100]);
     let yAxis = d3.axisLeft(yScale).ticks(20);
 
+    let tooltip = d3.select("body").append("div").attr("class", "toolTipDot");
+
     let colorScale = d3.scaleSequential().domain([21,28])
         .interpolator(d3.interpolateBlues);
 
@@ -76,6 +78,18 @@ function main() {
             .attr("r", 12)
             .attr("fill", function(d) { return colorScale(d.age); })
             .attr("stroke", "black")
+            .on("mouseover", function(event, d){
+                tooltip
+                    .style("left", event.pageX + "px")
+                    .style("top", event.pageY + "px")
+                    .style("display", "inline-block")
+                    .html("<br>" + "Top Player: " + d.player
+                        + "<br>" + "Age: " + d.topage
+                        + "<br>" + "Rating: " + d.overall
+                        + "<br>" + "Nationality: " + d.nationality
+                        + "<br>" + "Team: " + d.team);
+            })
+            .on("mouseout", function() { tooltip.style("display", "none"); });
 
         // whole chart goes away when i have this
         let legend = d3

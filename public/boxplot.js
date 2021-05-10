@@ -8,6 +8,8 @@ function main() {
     let x = d3.scaleLinear().domain([16, 44]).range([460, 1335]);
     let xaxis = d3.axisBottom(x).ticks(20).tickFormat(d => d);
 
+    let tooltip = d3.select("body").append("div").attr("class", "toolTipBox");
+
     svg.append("text")
         .attr("transform", "translate(950, 440)")
         .attr("x", 0)
@@ -46,12 +48,24 @@ function main() {
             .attr("stroke", "black")
 
         svg.append("rect")
-            .attr("x", 790)
+            .attr("x", 728)
             .attr("y", 260)
-            .attr("width", (q1+q3) + 9)
+            .attr("width", (q1+q3)*4.1)
             .attr("height", 100)
             .attr("fill", '#002776')
             .attr("stroke", "black")
+            .on("mouseover", function(event, d){
+                tooltip
+                    .style("left", event.pageX + "px")
+                    .style("top", event.pageY + "px")
+                    .style("display", "inline-block")
+                    .html("<br>" + "Min: " + min
+                        + "<br>" + "Q1: " + q1
+                        + "<br>" + "Median: " + median
+                        + "<br>" + "Q3: " + q3
+                        + "<br>" + "Max: " + max);
+            })
+            .on("mouseout", function() { tooltip.style("display", "none"); });
 
         svg.append("line")
             .attr("x1", max*31.45)

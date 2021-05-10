@@ -1,16 +1,16 @@
-position,age
-ST,27
-CF,25
-LW,23
-RW,25
-CAM,25
-CM,25
-LM,26
-RM,26
-CDM,27
-LWB,27
-LB,27
-CB,27
-RB,27
-RWB,27
-GK,28
+position,age,player,nationality,position,overall,topage,team
+ST,27,Lionel Messi,Argentina,ST,94,33,FC Barcelona 
+CF,25,Roberto Firmino,Brazil,CF,88,28,Liverpool 
+LW,23,Sadio Mane,Senegal,LW,90,28,Liverpool 
+RW,25,Raheem Sterling,England,RW,88,25,Manchester City 
+CAM,25,Neymar Jr,Brazil,CAM,92,28,Paris Saint-Germain 
+CM,25,Kevin De Bruyne,Belgium,CM,91,29,Manchester City 
+LM,26,Heung Min Son,Korea Republic,LM,87,28,Tottenham Hotspur 
+RM,26,Christian Eriksen,Denmark,RM,87,28,Inter 
+CDM,27,N'Golo Kante,France,CDM,89,29,Chelsea 
+LWB,27,Filip Kostic,Serbia,LWB,83,27,Eintracht Frankfurt 
+LB,27,Andrew Robertson,Scotland,LB,86,26,Liverpool 
+CB,27,Virgil van Dijk,Netherlands,CB,91,29,Liverpool 
+RB,27,Joshua Kimmich,Germany,RB,87,25,FC Bayern MŸnchen 
+RWB,27,Aaron Wan-Bissaka,England,RWB,82,22,Manchester United 
+GK,28,Jan Oblak,Slovenia,GK,91,27,Atletico Madrid 

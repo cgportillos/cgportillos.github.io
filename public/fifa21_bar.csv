@@ -1,21 +1,21 @@
-nationality,overall
-Netherlands,1
-Korea Republic,1
-Gabon,1
-Egypt,1
-Denmark,1
-Croatia,1
-Costa Rica,1
-Uruguay,2
-Slovenia,2
-Senegal,2
-Portugal,2
-Poland,2
-England,2
-Italy,3
-Belgium,4
-Argentina,4
-Spain,6
-Germany,6
-Brazil,6
-France,7
+nationality,overall,player,rating,position,team
+Netherlands,1,Virgil van Dijk,91,Center Back,Liverpool
+Korea Republic,1,Heung Min Son,87,Striker,Tottenham Spurs
+Gabon,1,Pierre-Emerick Aubameyang,87,Striker,Arsenal
+Egypt,1,Mohamed Salah,90,Right Wing,Liverpool
+Denmark,1,Christian Eriksen,87,Center Midfield,Inter Milan
+Croatia,1,Luka Modric,89,Center Midfield,Real Madrid
+Costa Rica,1,Keylor Navas,87,Goalkeeper,Paris Saint-Germain
+Uruguay,2,Luis Suarez,89,Striker,Atletico Madrid
+Slovenia,2,Jan Oblak,91,Goalkeeper,Atletico Madrid
+Senegal,2,Sadio Mane,90,Left Wing,Liverpool
+Portugal,2,Cristiano Ronaldo,94,Striker,Juventus
+Poland,2,Robert Lewandowski,91,Striker,Bayern Munich
+England,2,Harry Kane,89,Striker,Tottenham Spurs
+Italy,3,Giorgio Chiellini,88,Center Back,Juventus
+Belgium,4,Eden Hazard,91,Striker,Real Madrid
+Argentina,4,Lionel Messi,94,Striker,FC Barcelona
+Spain,6,Sergio Ramos,89,Center Back,Real Madrid
+Germany,6,Marc-Andre ter Stegen,90,Goalkeeper,FC Barcelona
+Brazil,6,Neymar Jr,92,Center-Attacking Midfield,Paris Saint-Germain
+France,7,Kylian Mbappe,90,Striker,Paris Saint-Germain

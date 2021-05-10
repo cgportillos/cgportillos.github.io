@@ -1,11 +1,11 @@
-country,hits,avg_potential
-England,5653,72
-France,4815,74
-Spain,4261,75
-Brazil,3322,74
-Argentina,2864,74
-Germany,2715,72
-Italy,2600,73
-Portugal,2056,76
-Netherlands,1801,74
-Belgium,1152,76
+country,hits,name,tophits,position,overall,age,team
+England,5653,Jadon Sancho,300,Right Midfield,86,20,Borussia Dortmund 
+France,4815,Kylian Mbappe,222,Striker,89,21,Paris Saint-Germain 
+Spain,4261,Ansu Fati,243,Right Wing,73,17,FC Barcelona 
+Brazil,3322,Neymar Jr,186,Center-Attacking Midfield,92,28,Paris Saint-Germain 
+Argentina,2864,Lionel Messi,299,Striker,94,33,FC Barcelona 
+Germany,2715,Kai Havertz,176,Right Midfield,84,21,Bayer 04 Leverkusen 
+Italy,2600,Sandro Tonali,168,Center-Defensive Midfield,77,20,Brescia 
+Portugal,2056,Cristiano Ronaldo,276,Striker,93,35,Juventus 
+Netherlands,1801,Virgil van Dijk,127,Center Back,91,29,Liverpool 
+Belgium,1152,Kevin de Bruyne,119,Center Midfield,91,29,Manchester City 
